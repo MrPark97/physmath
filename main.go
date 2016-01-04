@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	physdb     = "postgres://usqhjiqrwslumu:Z_PorYcYUUEdwgNBUFhWk3vMVZ@ec2-54-204-8-138.compute-1.amazonaws.com:5432/datuej4qjvf8bm"
-	mathdb     = "postgres://usqhjiqrwslumu:Z_PorYcYUUEdwgNBUFhWk3vMVZ@ec2-54-204-8-138.compute-1.amazonaws.com:5432/datuej4qjvf8bm"
+	physdb     = os.Getenv("DATABASE_URL")
+	mathdb     = os.Getenv("DATABASE_URL")
 	physdbname = "u233172724_phys"
 	mathdbname = "u233172724_math"
 )
