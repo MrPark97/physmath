@@ -15,6 +15,11 @@
 				<li onclick="request.send('theme=inequalities');" style="background-image: url('/static/images/inequalities.png');">{{.Inequalities}}</li>
 				<li onclick="request.send('theme=calculus');" style="background-image: url('/static/images/calculus.png');">{{.Calculus}}</li>
 			</ul>
+			<h2>{{.Mathh2}}</h2>
+			<ul>
+				<li onclick="request.send('theme=plane');" style="background-image: url('/static/images/plane.png');">{{.Plane}}</li>
+				<li onclick="request.send('theme=solidgeometry');" style="background-image: url('/static/images/solidgeometry.png');">{{.Solid}}</li>
+			</ul>
 		</div>
 		<div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>
 		<div class="indexblock" id="physindexblock">

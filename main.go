@@ -129,7 +129,7 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 
 func IndexPrint(w http.ResponseWriter, r *http.Request) {
 	type data struct {
-		Mathh, Addscript, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Mathh1, Numbers, Algebraic, Geometry, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
+		Mathh, Addscript, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Mathh1, Mathh2, Numbers, Algebraic, Geometry, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
 	}
 
 	var (
@@ -149,6 +149,7 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Problemsp = "Physics and mathematics problems. Several problems have animated canvas. Physics problems by L. Tarasov, A. Tarasova."
 
 		Data.Mathh1 = "Algebra and analysis begin"
+		Data.Mathh2 = "Geometry"
 		Data.Numbers = "Numbers"
 		Data.Algebraic = "Algebraic expressions"
 		Data.Geometry = "Geometry"
@@ -158,6 +159,8 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Equations = "Equations and systems of equations"
 		Data.Inequalities = "Inequalities"
 		Data.Calculus = "Elements of calculus"
+		Data.Plane = "Geometric figures on plane"
+		Data.Solid = "Solod geometry"
 
 		Data.Mechanics = "Mechanics"
 		Data.Thermodynamics = "Bases of molecular physics and thermodynamics"
@@ -177,6 +180,7 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Problemsp = "Задачи по физике и математике. В некоторых задачах присутствует анимированый холст. Задачи по физике от Л. Тарасова, А. Тарасовой."
 
 		Data.Mathh1 = "Алгебра и начала анализа"
+		Data.Mathh2 = "Геометрия"
 		Data.Numbers = "Числа"
 		Data.Algebraic = "Алгебраические выражения"
 		Data.Algebra = "Алгебра и начала анализа"
@@ -185,6 +189,8 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Equations = "Уравнения и системы уравнений"
 		Data.Inequalities = "Неравенства"
 		Data.Calculus = "Элементы математического анализа"
+		Data.Plane = "Геометрические фигуры на плоскости"
+		Data.Solid = "Стереометрия"
 
 		Data.Mechanics = "Механика"
 		Data.Thermodynamics = "Основы молекулярной физики и термодинамики"
