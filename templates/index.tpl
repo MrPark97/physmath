@@ -5,7 +5,7 @@
 			<img src="/static/images/math.png" id="mathfrontimg">
 		</div>
 		<div class="mainblock" id="mathmainblock">
-			<h2>{{.Mathh1}}</h2>
+			<h2>{{.Algebra}}</h2>
 			<ul>
 				<li onclick="request.send('theme=numbers');" style="background-image: url('/static/images/numbers.png');">{{.Numbers}}</li>
 				<li onclick="request.send('theme=algebraic'); "style="background-image: url('/static/images/algebraic.png');">{{.Algebraic}}</li>
@@ -15,10 +15,13 @@
 				<li onclick="request.send('theme=inequalities');" style="background-image: url('/static/images/inequalities.png');">{{.Inequalities}}</li>
 				<li onclick="request.send('theme=calculus');" style="background-image: url('/static/images/calculus.png');">{{.Calculus}}</li>
 			</ul>
-			<h2>{{.Mathh2}}</h2>
+			<h2>{{.Geometry}}</h2>
 			<ul>
 				<li onclick="request.send('theme=plane');" style="background-image: url('/static/images/plane.png');">{{.Plane}}</li>
 				<li onclick="request.send('theme=solidgeometry');" style="background-image: url('/static/images/solidgeometry.png');">{{.Solid}}</li>
+				<li onclick="request.send('theme=coordinates');" style="background-image: url('/static/images/coordinates.png');">{{.Coordinates}}</li>
+				<li onclick="request.send('theme=transformations');" style="background-image: url('/static/images/transformations.png');">{{.Transformations}}</li>
+				<li onclick="request.send('theme=vectors');" style="background-image: url('/static/images/vectors.png');">{{.Vectors}}</li>
 			</ul>
 		</div>
 		<div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>

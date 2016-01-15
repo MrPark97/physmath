@@ -129,7 +129,7 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 
 func IndexPrint(w http.ResponseWriter, r *http.Request) {
 	type data struct {
-		Mathh, Addscript, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Mathh1, Mathh2, Numbers, Algebraic, Geometry, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
+		Mathh, Addscript, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
 	}
 
 	var (
@@ -148,11 +148,9 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Problemsh = "Problems"
 		Data.Problemsp = "Physics and mathematics problems. Several problems have animated canvas. Physics problems by L. Tarasov, A. Tarasova."
 
-		Data.Mathh1 = "Algebra and analysis begin"
-		Data.Mathh2 = "Geometry"
+		Data.Geometry = "Geometry"
 		Data.Numbers = "Numbers"
 		Data.Algebraic = "Algebraic expressions"
-		Data.Geometry = "Geometry"
 		Data.Algebra = "Algebra and analysis begin"
 		Data.Functions = "Functions and graphs"
 		Data.Transcendental = "Transcendental expressions"
@@ -161,6 +159,9 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Calculus = "Elements of calculus"
 		Data.Plane = "Geometric figures on plane"
 		Data.Solid = "Solod geometry"
+		Data.Coordinates = "Cartesian system of coordinates"
+		Data.Transformations = "Transformations of the figures"
+		Data.Vectors = "Vectors"
 
 		Data.Mechanics = "Mechanics"
 		Data.Thermodynamics = "Bases of molecular physics and thermodynamics"
@@ -179,8 +180,7 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Problemsh = "Задачи"
 		Data.Problemsp = "Задачи по физике и математике. В некоторых задачах присутствует анимированый холст. Задачи по физике от Л. Тарасова, А. Тарасовой."
 
-		Data.Mathh1 = "Алгебра и начала анализа"
-		Data.Mathh2 = "Геометрия"
+		Data.Geometry = "Геометрия"
 		Data.Numbers = "Числа"
 		Data.Algebraic = "Алгебраические выражения"
 		Data.Algebra = "Алгебра и начала анализа"
@@ -191,6 +191,9 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Calculus = "Элементы математического анализа"
 		Data.Plane = "Геометрические фигуры на плоскости"
 		Data.Solid = "Стереометрия"
+		Data.Coordinates = "Декартовы координаты"
+		Data.Transformations = "Преобразования фигур"
+		Data.Vectors = "Векторы"
 
 		Data.Mechanics = "Механика"
 		Data.Thermodynamics = "Основы молекулярной физики и термодинамики"
