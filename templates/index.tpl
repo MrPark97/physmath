@@ -63,7 +63,7 @@
 		<div class="indexblock" id="scientistindexblock">
 			<h1>Einstein</h1>
 			<p><i>"As far as the laws of mathematics refer to reality, they are not certain, and as far as they are certain, they do not refer to reality."</i></p>
-			<div class="button" onclick="ScientistOpen(); request.send('scientist='+scientist.name);"><h6>{{.Readmore}}</h6></div>
+			<div class="button" onclick="ScientistOpen();"><h6>{{.Readmore}}</h6></div>
 			<img src="/static/scientists/einstein.jpg" id="scientistfrontimg">
 		</div>
 		<div class="mainblock" id="scientistmainblock">

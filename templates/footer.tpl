@@ -18,7 +18,7 @@
 <script src="/static/script.js"></script>
 <script>
 	var browser;
-	var scientistHeader = {{.ScientistHeader}};
+	var scientistHeader = "{{.ScientistHeader}}";
 	if(navigator["mozGetUserMedia"]) browser = "moz";
 	else if(navigator["webkitGetUserMedia"]) browser = "webkit";
 

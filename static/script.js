@@ -124,7 +124,7 @@ function gracefulScroll(y) {
 
 		function openScientists(section, browser) {
 		if(browser == 'moz') {
-			$('#'+section+'indexblock p').css({
+			/*$('#'+section+'indexblock p').css({
 				"-moz-animation-duration" : "1s",
 				"-moz-animation-fill-mode" : "forwards",
 				"-moz-animation-name" : "fadeOut",
@@ -169,13 +169,14 @@ function gracefulScroll(y) {
 					"-moz-animation-duration" : "1s",
 					"-moz-animation-fill-mode" : "forwards",
 					"-moz-animation-name" : "footerShow",
-					});
+					});*/
 					setTimeout(function(){
-						$(".indexblock").not("#"+section+"indexblock").remove();
-						window.scrollTo(0, 0);
+						//$(".indexblock").not("#"+section+"indexblock").remove();
+						//window.scrollTo(0, 0);
+						window.location.pathname = "/scientist/"+scientist.name;
 					}, 1000);
-				}, 1000);
-			}, 1000);
+				/*}, 1000);
+			}, 1000);*/
 		} else if(browser == 'webkit') {
 			$('#'+section+'indexblock p').css({
 				"-webkit-animation-duration" : "1s",
@@ -226,8 +227,13 @@ function gracefulScroll(y) {
 					setTimeout(function(){
 						$(".indexblock").not("#"+section+"indexblock").remove();
 						window.scrollTo(0, 0);
+						window.location.pathname = "/scientist/"+scientist.name;
 					}, 1000);
 				}, 1000);
+			}, 1000);
+		} else {
+			setTimeout(function(){
+				window.location.pathname = "/scientist/"+scientist.name;
 			}, 1000);
 		}
 	}
@@ -305,5 +311,14 @@ function nextScientist(scientist, section, browser) {
 					"-webkit-animation-name" : "fadeIn",
 				});
 			}, 1000);
+
+} else {
+	setTimeout(function() {
+				$('#'+section+'indexblock h1').text(scientist.name);
+				$('#'+section+'indexblock p').html(scientist.quote);
+				$('#'+section+'frontimg').attr("src", scientist.image);
+			}, 1000);
 }
 }
+
+window.location.re

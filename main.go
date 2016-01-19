@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/lib/pq"
-	"html/template"
+	"text/template"
 	"log"
 	"net/http"
 	"os"
@@ -20,6 +20,7 @@ var (
 func main() {
 	port := os.Getenv("PORT")
 	http.HandleFunc("/", homePage)
+	http.HandleFunc("/scientist/", scientistHandler)
 	http.HandleFunc("/posthandler", PostHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
 	err := http.ListenAndServe(":"+port, nil)
@@ -237,9 +238,6 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	if name := r.PostFormValue("name"); name != "" {
 		nameHandler(w, r, name, r.PostFormValue("articletheme"))
-	}
-	if scientist := r.PostFormValue("scientist"); scientist != "" {
-		scientistHandler(w, r, scientist)
 	}
 	if problems := r.PostFormValue("problems"); problems != "" {
 		problemHandler(w, r, problems)
@@ -462,19 +460,22 @@ func nameHandler(w http.ResponseWriter, r *http.Request, name, theme string) {
 	rows.Close()
 }
 
-func scientistHandler(w http.ResponseWriter, r *http.Request, scientist string) {
+func scientistHandler(w http.ResponseWriter, r *http.Request) {
+	scientist := r.URL.Path[len("/scientist/"):]
 	lang, err := r.Cookie("lang")
-	var namelg, scientistlg, articlelg, quotelg string
+	var namelg, scientistlg, articlelg, quotelg, scientists string
 	if lang != nil && lang.Value == `en` {
 		namelg = `name_en`
 		scientistlg = `scientist`
 		articlelg = `article_en`
 		quotelg = `quote`
+		scientists = `Scientists`
 	} else {
 		namelg = `name`
 		scientistlg = `scientist_ru`
 		articlelg = `article`
 		quotelg = `quote_ru`
+		scientists = `Учёные`
 	}
 
 	dbcons := physdb
@@ -493,12 +494,26 @@ func scientistHandler(w http.ResponseWriter, r *http.Request, scientist string) 
 	var article, name, quote, img string
 	for rows.Next() {
 		err = rows.Scan(&article, &name, &quote, &img)
-		fmt.Fprint(w, `<h2>`, name, `</h2>`)
-		fmt.Fprint(w, `<blockquote>"`, quote, `"</blockquote>`)
-		fmt.Fprint(w, `<img src="/static/scientists/`, img, `">`)
-		fmt.Fprint(w, article)
 	}
 	rows.Close()
+
+	t, err := template.ParseFiles("templates/scientist.tpl")
+	if err != nil {
+		log.Println("template error")
+	}
+	data := struct {
+		Name, Article, Img, ScientistH, Quote string
+	}{
+		name,
+		article,
+		img,
+		scientists,
+		quote,
+	}
+	err = t.Execute(w, data)
+	if err != nil {
+		log.Println("template print error", err)
+	}
 }
 
 func problemHandler(w http.ResponseWriter, r *http.Request, problems string) {
