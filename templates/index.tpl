@@ -5,7 +5,7 @@
 			<img src="/static/images/math.png" id="mathfrontimg">
 		</div>
 		<div class="mainblock" id="mathmainblock">
-			<h2>{{.Algebra}}</h2>
+			<!-- <h2>{{.Algebra}}</h2>
 			<ul>
 				<li onclick="request.send('theme=numbers');" style="background-image: url('/static/images/numbers.png');">{{.Numbers}}</li>
 				<li onclick="request.send('theme=algebraic'); "style="background-image: url('/static/images/algebraic.png');">{{.Algebraic}}</li>
@@ -22,7 +22,7 @@
 				<li onclick="request.send('theme=coordinates');" style="background-image: url('/static/images/coordinates.png');">{{.Coordinates}}</li>
 				<li onclick="request.send('theme=transformations');" style="background-image: url('/static/images/transformations.png');">{{.Transformations}}</li>
 				<li onclick="request.send('theme=vectors');" style="background-image: url('/static/images/vectors.png');">{{.Vectors}}</li>
-			</ul>
+			</ul> -->
 		</div>
 		<div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>
 		<div class="indexblock" id="physindexblock">
@@ -32,7 +32,7 @@
 			<img src="/static/images/physics.png" id="physfrontimg">
 		</div>
 		<div class="mainblock" id="physmainblock">
-			<h2>{{.Physh}}</h2>
+			<!-- <h2>{{.Physh}}</h2>
 			<ul>
 				<li onclick="request.send('theme=mechanics');" style="background-image: url('/static/images/mechanics.png');">{{.Mechanics}}</li>
 				<li onclick="request.send('theme=thermodynamics');" style="background-image: url('/static/images/thermodynamics.png');">{{.Thermodynamics}}</li>
@@ -42,7 +42,7 @@
 				<li onclick="request.send('theme=atoms');" style="background-image: url('/static/images/atoms.png');">{{.Atoms}}</li>
 				<li onclick="request.send('theme=hard');" style="background-image: url('/static/images/hard.png');">{{.Hard}}</li>
 				<li onclick="request.send('theme=nucleus');" style="background-image: url('/static/images/nucleus.png');">{{.Nucleus}}</li>
-			</ul>
+			</ul> -->
 		</div>
 		<div class="footer" id="physfooter"><a href="#">&copy; MrPark 2015</a></div>
 		<div class="indexblock" id="problemsindexblock">
@@ -52,12 +52,12 @@
 			<img src="/static/images/problems.png" id="problemsfrontimg">
 		</div>
 		<div class="mainblock" id="problemsmainblock">
-			<h2>{{.Problemsh}}</h2>
+			<!-- <h2>{{.Problemsh}}</h2>
 			<ul>
 				<li onclick="request.send('problems=mechanics');" style="background-image: url('/static/images/mechanics.png');">{{.Mechanics}}</li>
 				<li onclick="request.send('problems=thermodynamics');" style="background-image: url('/static/images/thermodynamics.png');">{{.Thermodynamics}}</li>
 				<li onclick="request.send('problems=electrodynamics');" style="background-image: url('/static/images/electrodynamics.png');">{{.Electrodynamics}}</li>
-			</ul>
+			</ul> -->
 		</div>
 		<div class="footer" id="problemsfooter"><a href="#">&copy; MrPark 2015</a></div>
 		<div class="indexblock" id="scientistindexblock">

@@ -26,52 +26,11 @@ function gracefulScroll(y) {
 				}, frequency);
 			}
 		}
-		function sectionOpenAnimation(section, browser) {
-			if(browser == 'moz') {
-			$('#'+section+'indexblock p').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "fadeOut",
-			});
-			$('#'+section+'indexblock .button').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "fadeOut",
-			});
-			$('#'+section+'frontimg').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "imgResize",
-			});
-			$('#'+section+'indexblock h1').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "hResize",
-			});
+
+function sectionOpenAnimation(section, browser, href) {
+		if(browser == 'moz') {
 			setTimeout(function(){
-				$('#'+section+'indexblock p').remove();
-				$('#'+section+'indexblock .button').remove();
-				$('#'+section+'indexblock').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "openSection",
-				});
-				setTimeout(function(){
-					$('#'+section+'mainblock').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "mainShow",
-					});
-					$('#'+section+'footer').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "footerShow",
-					});
-					setTimeout(function(){
-						$(".indexblock").not("#"+section+"indexblock").remove();
-						window.scrollTo(0, 0);
-					}, 1000);
-				}, 1000);
+				window.location.pathname = href;
 			}, 1000);
 		} else if(browser == 'webkit') {
 			$('#'+section+'indexblock p').css({
@@ -116,67 +75,23 @@ function gracefulScroll(y) {
 					setTimeout(function(){
 						$(".indexblock").not("#"+section+"indexblock").remove();
 						window.scrollTo(0, 0);
+						window.location.pathname = href;
 					}, 1000);
 				}, 1000);
 			}, 1000);
 		}
-		}
-
-		function openScientists(section, browser) {
-		if(browser == 'moz') {
-			/*$('#'+section+'indexblock p').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "fadeOut",
-			});
-			$('#'+section+'indexblock .button').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "fadeOut",
-			});
-			$('#'+section+'frontimg').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "fadeOut",
-			});
-			$('#'+section+'indexblock h1').css({
-				"-moz-animation-duration" : "1s",
-				"-moz-animation-fill-mode" : "forwards",
-				"-moz-animation-name" : "hResize1",
-			});
+		else {
 			setTimeout(function(){
-				$('#'+section+'indexblock p').remove();
-				$('#'+section+'indexblock .button').remove();
-				$('#'+section+'frontimg').remove();
-				$('#'+section+'indexblock').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "openSection",
-				});
-				$('#'+section+'indexblock h1').text(scientistHeader);
-				$('#'+section+'indexblock h1').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "fadeIn1",
-				});
-				setTimeout(function(){
-					$('#'+section+'mainblock').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "mainShow",
-					});
-					$('#'+section+'footer').css({
-					"-moz-animation-duration" : "1s",
-					"-moz-animation-fill-mode" : "forwards",
-					"-moz-animation-name" : "footerShow",
-					});*/
+				window.location.pathname = href;
+			}, 1000);
+		}
+}
+
+function openScientists(section, browser) {
+		if(browser == 'moz') {
 					setTimeout(function(){
-						//$(".indexblock").not("#"+section+"indexblock").remove();
-						//window.scrollTo(0, 0);
 						window.location.pathname = "/scientist/"+scientist.name;
 					}, 1000);
-				/*}, 1000);
-			}, 1000);*/
 		} else if(browser == 'webkit') {
 			$('#'+section+'indexblock p').css({
 				"-webkit-animation-duration" : "1s",

@@ -13,7 +13,7 @@
 	}, 5000);
 	function MathOpen() {
 		gracefulScroll(0);
-		sectionOpenAnimation("math", browser);
+		sectionOpenAnimation("math", browser, "/math");
 	}
 	
 	function PhysicsOpen() {
@@ -22,7 +22,7 @@
 		} else {
 			gracefulScroll(248);
 		}
-		sectionOpenAnimation("phys", browser);
+		sectionOpenAnimation("phys", browser, "/physics");
 	}
 
 	function ProblemsOpen() {
@@ -31,7 +31,7 @@
 		} else {
 			gracefulScroll(492);
 		}
-		sectionOpenAnimation("problems", browser);
+		sectionOpenAnimation("problems", browser, "/problems");
 	}
 
 	function ScientistOpen() {
