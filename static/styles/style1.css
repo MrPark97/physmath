@@ -679,3 +679,12 @@ em {
 a {
 	text-decoration: none;
 }
+
+.mainblock .MathJax {
+	margin: 0;
+	display: inline;
+}
+
+.mainblock .MathJax_Preview {
+	display: none;
+}

@@ -672,3 +672,12 @@ em {
 	content: '';
 	clear: both;
 }
+
+.mainblock .MathJax {
+	margin: 0px;
+	display: inline;
+}
+
+.mainblock .MathJax_Preview {
+	display: none;
+}
