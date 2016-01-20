@@ -19,5 +19,13 @@
 		{{.Article}}
 		</div>
 		<div class="footer" id="scientistfooter"><a href="#">&copy; MrPark 2015</a></div>
+<script id="MathJax" defer type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+	if(navigator["mozGetUserMedia"]) {
+		var mj = document.getElementById('MathJax');
+		document.body.removeChild(mj);
+	}
+</script>
 </body>
 </html>
