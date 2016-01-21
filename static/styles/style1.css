@@ -1,12 +1,12 @@
 @font-face {
 	font-family: Segoe UI;
-	src: url('../fonts/segoeuib.ttf');
+	src: url('../fonts/TT Masters DEMO Black.otf');
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: Segoe UI;
-	src: url('../fonts/segoeui.ttf');
+	src: url('../fonts/TT Masters DEMO Birds Regular.otf');
 }
 
 @font-face {
@@ -635,6 +635,7 @@ em {
 
 .mainblock table tr td {
 	margin: 4px;
+	font-family: Calibri;
 }
 
 .mainblock span {

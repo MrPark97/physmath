@@ -20,7 +20,7 @@
 		if(window.innerWidth > 769) {
 			gracefulScroll(450);
 		} else {
-			gracefulScroll(248);
+			gracefulScroll(234);
 		}
 		sectionOpenAnimation("phys", browser, "/physics");
 	}
@@ -29,7 +29,7 @@
 		if(window.innerWidth > 769) {
 			gracefulScroll(900);
 		} else {
-			gracefulScroll(492);
+			gracefulScroll(460);
 		}
 		sectionOpenAnimation("problems", browser, "/problems");
 	}
@@ -38,7 +38,7 @@
 		if(window.innerWidth > 769) {
 			gracefulScroll(1350);
 		} else {
-			gracefulScroll(740);
+			gracefulScroll(693);
 		}
 		clearInterval(scientistChange);
 		openScientists("scientist", browser);
