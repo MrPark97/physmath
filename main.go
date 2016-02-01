@@ -28,6 +28,7 @@ func main() {
 	http.HandleFunc("/physics", PhysIndex)
 	http.HandleFunc("/physics/", PhysInfo)
 	http.HandleFunc("/problems", ProblemIndex)
+	http.HandleFunc("/google227af1ab1e0f26ee.html", GoogleWebMaster)
 	http.HandleFunc("/problems/", ProblemInfo)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
 	err := http.ListenAndServe(":"+port, nil)
@@ -40,6 +41,18 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	headerOut(w)
 	IndexPrint(w, r)
 	footerOut(w, r)
+}
+
+func GoogleWebMaster(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("templates/google227af1ab1e0f26ee.html")
+	if err != nil {
+		log.Println("template error")
+	}
+	data := struct {}{}
+	err = t.Execute(w, data)
+	if err != nil {
+		log.Println("template print error", err)
+	}
 }
 
 func headerOut(w http.ResponseWriter) {
