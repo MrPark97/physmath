@@ -1,0 +1,4 @@
+http://physmath.herokuapp.com/
+http://physmath.herokuapp.com/math
+http://physmath.herokuapp.com/physics
+http://physmath.herokuapp.com/problems
