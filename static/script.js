@@ -235,5 +235,3 @@ function nextScientist(scientist, section, browser) {
 			}, 1000);
 }
 }
-
-window.location.re

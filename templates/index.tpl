@@ -1,5 +1,5 @@
-<div class="indexblock" id="mathindexblock">
-	<h1>{{.Mathh}}</h1>
+		<div class="indexblock" id="mathindexblock">
+			<h1>{{.Mathh}}</h1>
 			<p>{{.Mathp}}</p>
 			<div class="button" onclick="MathOpen();"><h6>{{.Readmore}}</h6></div>
 			<img src="/static/images/math.png" id="mathfrontimg">
