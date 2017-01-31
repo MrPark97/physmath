@@ -3,7 +3,7 @@ website about physics and mathematics
 
 http://physmath.herokuapp.com/
 
-This diploma work of the student of college of information technology.
+This diploma work of the student of TPCIT.
 
 Version 1.0 is written in PHP. Database mysql.
 
