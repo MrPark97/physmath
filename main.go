@@ -92,7 +92,7 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 
 	lang, err := r.Cookie("lang")
 	if lang != nil && lang.Value == `en` {
-		Data.Intended = `This site is intended for all, who wants to hear little more about physics and mathematics. The site is created in the first place for you, users so you do not see the boring advertisment and madly moving flash-banners or gifs. The design and programme code of this site were created without different CMS and copying programme code from elbowroom of the worldwide network by student of the Tashkent Professional College of Information Technologies. Hope that you like the site and you value it on value. Want you to find useful information in the site depths.`
+		Data.Intended = `This site is for anyone looking to learn a little more about physics and mathematics. The site was created primarily for you, the users, so you will not see annoying ads and insanely jumping flash banners or GIFs. The design and program code of this site were created from scratch, without the use of various engines and copying the program code from the vastness of the worldwide network, by a student of the Tashkent Professional College of Information Technologies. I hope you enjoy this site and appreciate it. I wish you to find useful information in the bowels of this resource's web pages.`
 		Data.Myname = `Park Eugene`
 		Data.Myp = `Park Eugene (16.05.1997, Tashkent - ...) - programmer.`
 		Data.Myp1 = `Mr.Park was born 16 May 1997. In 2004-2013 learned in specialized school 103.
@@ -100,7 +100,7 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 		Data.Langh = `Language`
 		Data.ScientistHeader = `Scientists`
 	} else {
-		Data.Intended = `Этот сайт предназначен для всех, кто хочет узнать немного больше о физике и математике. Сайт создан в первую очередь для вас, пользователей, поэтому вы не увидите надоедливой рекламы и безумно дрыгающихся флэш-баннеров или гифок. Дизайн и программный код данного сайта были созданы с нуля, без использования различных движков и копирования программного кода с просторов всемирной сети, студентом Ташкентского Профессионального Колледжа Информационных Технологий. Надеюсь, что вам понравится данный сайт и вы оцените его по достоинству. Желаю вам найти полезную информацию в недрах веб-страничек данного ресурса.`
+		Data.Intended = `Этот сайт предназначен для всех, кто хочет узнать немного больше о физике и математике. Сайт создан в первую очередь для вас, пользователей, поэтому Вы не увидите надоедливой рекламы и безумно дрыгающихся флэш-баннеров или гифок. Дизайн и программный код данного сайта были созданы с нуля, без использования различных движков и копирования программного кода с просторов всемирной сети, студентом Ташкентского Профессионального Колледжа Информационных Технологий. Надеюсь, что Вам понравится данный сайт и Вы оцените его по достоинству. Желаю Вам найти полезную информацию в недрах веб-страничек данного ресурса.`
 		Data.Myname = `Пак Евгений`
 		Data.Myp = `Пак Евгений Герасимович (16.05.1997, Ташкент - ...) - программист.`
 		Data.Myp1 = `Е. Г. Пак родился 16 мая 1997. В 2004-2013 учился в специализированной школе №103. 
