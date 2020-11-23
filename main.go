@@ -20,6 +20,18 @@ var (
 
 func main() {
 	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	if physdb == "" {
+		physdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
+	}
+	
+	if mathdb == "" {
+		mathdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
+	}
+
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/scientist/", scientistHandler)
 	http.HandleFunc("/posthandler", PostHandler)

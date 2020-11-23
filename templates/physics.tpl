@@ -13,10 +13,10 @@
 </div>
 <div class="indexblock" id="physindexblock">
 	<h1>{{.Physh}}</h1>
-	<img src="/static/images/physics.png" id="physfrontimg">
+	<img src="/static/images/physics.svg" id="physfrontimg">
 </div>
 <div class="mainblock" id="physmainblock">
-		{{if (len .Article) gt 2 }}
+		{{if gt (len .Article) 2 }}
 
 			{{.Article}}
 		{{else}}

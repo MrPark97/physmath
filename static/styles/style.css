@@ -180,7 +180,7 @@ em {
 
 #mathfrontimg {
 	height: 450px;
-	margin-top: -225px;
+	margin-top: -200px;
 	margin-left: 70px;
 	position: relative;
 }
@@ -235,7 +235,7 @@ em {
 
 #physfrontimg {
 	height: 450px;
-	margin-top: -225px;
+	margin-top: -200px;
 	float: right;
 	margin-right: 70px;
 	position: relative;
@@ -292,7 +292,7 @@ em {
 
 #problemsfrontimg {
 	height: 450px;
-	margin-top: -225px;
+	margin-top: -200px;
 	margin-left: 70px;
 	position: relative;
 }
@@ -721,11 +721,11 @@ em {
 @-moz-keyframes imgResize{
 	from {
 		height: 450px;
-		margin-top: -225px;
+		margin-top: -200px;
 	}
 	to {
 		height: 150px;
-		margin-top: -75px;
+		margin-top: -68px;
 	}
 }
 
@@ -834,11 +834,11 @@ em {
 @-webkit-keyframes imgResize{
 	from {
 		height: 450px;
-		margin-top: -225px;
+		margin-top: -200px;
 	}
 	to {
 		height: 150px;
-		margin-top: -75px;
+		margin-top: -68px;
 	}
 }
 

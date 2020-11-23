@@ -2,7 +2,7 @@
 			<h1>{{.Mathh}}</h1>
 			<p>{{.Mathp}}</p>
 			<div class="button" onclick="MathOpen();"><h6>{{.Readmore}}</h6></div>
-			<img src="/static/images/math.png" id="mathfrontimg">
+			<img src="/static/images/math.svg" id="mathfrontimg">
 		</div>
 		<div class="mainblock" id="mathmainblock">
 		</div>
@@ -11,7 +11,7 @@
 			<h1>{{.Physh}}</h1>
 			<p>{{.Physp}}</p>
 			<div class="button" onclick="PhysicsOpen();"><h6>{{.Readmore}}</h6></div>
-			<img src="/static/images/physics.png" id="physfrontimg">
+			<img src="/static/images/physics.svg" id="physfrontimg">
 		</div>
 		<div class="mainblock" id="physmainblock">
 		</div>

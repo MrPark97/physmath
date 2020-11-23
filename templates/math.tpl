@@ -12,10 +12,10 @@
 <body onresize="rePosH();">
 <div class="indexblock" id="mathindexblock">
 <h1>{{.Mathh}}</h1>
-<img src="/static/images/math.png" id="mathfrontimg">
+<img src="/static/images/math.svg" id="mathfrontimg">
 </div>
 <div class="mainblock" id="mathmainblock">
-		{{if (len .Article) gt 2 }}
+		{{if gt (len .Article) 2 }}
 
 			{{.Article}}
 		{{else}}

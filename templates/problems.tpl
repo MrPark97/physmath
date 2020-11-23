@@ -16,7 +16,7 @@
 			<img src="/static/images/problems.png" id="problemsfrontimg">
 		</div>
 		<div class="mainblock" id="problemsmainblock">
-		{{if (len .Article) gt 2 }}
+		{{if gt (len .Article) 2 }}
 
 			{{.Article}}
 		{{else}}
