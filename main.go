@@ -4,11 +4,11 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/lib/pq"
-	"text/template"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+	"text/template"
 )
 
 var (
@@ -27,7 +27,7 @@ func main() {
 	if physdb == "" {
 		physdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
 	}
-	
+
 	if mathdb == "" {
 		mathdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
 	}
@@ -60,7 +60,7 @@ func GoogleWebMaster(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println("template error")
 	}
-	data := struct {}{}
+	data := struct{}{}
 	err = t.Execute(w, data)
 	if err != nil {
 		log.Println("template print error", err)
@@ -75,7 +75,7 @@ func headerOut(w http.ResponseWriter) {
 	data := struct {
 		Title string
 	}{
-		`PHYSMATH.uz`,
+		`PHYSMATH.uk`,
 	}
 	err = t.Execute(w, data)
 	if err != nil {
@@ -93,15 +93,15 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 	lang, err := r.Cookie("lang")
 	if lang != nil && lang.Value == `en` {
 		Data.Intended = `This site is for anyone looking to learn a little more about physics and mathematics. The site was created primarily for you, the users, so you will not see annoying ads and insanely jumping flash banners or GIFs. The design and program code of this site were created from scratch, without the use of various engines and copying the program code from the vastness of the worldwide network, by a student of the Tashkent Professional College of Information Technologies. I hope you enjoy this site and appreciate it. I wish you to find useful information in the bowels of this resource's web pages.`
-		Data.Myname = `Park Eugene`
-		Data.Myp = `Park Eugene (16.05.1997, Tashkent - ...) - programmer.`
+		Data.Myname = `Evgeniy Pak`
+		Data.Myp = `Evgeniy Pak (16.05.1997, Tashkent - ...) - programmer.`
 		Data.Myp1 = `Mr.Park was born 16 May 1997. In 2004-2013 learned in specialized school 103.
 			In 2013 has entered in Tashkent Professional College of Information Technologies, profession - a technician of software and multimedia systems.`
 		Data.Langh = `Language`
 		Data.ScientistHeader = `Scientists`
 	} else {
 		Data.Intended = `Этот сайт предназначен для всех, кто хочет узнать немного больше о физике и математике. Сайт создан в первую очередь для вас, пользователей, поэтому Вы не увидите надоедливой рекламы и безумно дрыгающихся флэш-баннеров или гифок. Дизайн и программный код данного сайта были созданы с нуля, без использования различных движков и копирования программного кода с просторов всемирной сети, студентом Ташкентского Профессионального Колледжа Информационных Технологий. Надеюсь, что Вам понравится данный сайт и Вы оцените его по достоинству. Желаю Вам найти полезную информацию в недрах веб-страничек данного ресурса.`
-		Data.Myname = `Пак Евгений`
+		Data.Myname = `Евгений Пак`
 		Data.Myp = `Пак Евгений Герасимович (16.05.1997, Ташкент - ...) - программист.`
 		Data.Myp1 = `Е. Г. Пак родился 16 мая 1997. В 2004-2013 учился в специализированной школе №103. 
 			В 2013 поступил в Ташкентский Профессиональный Колледж Информационных Технологий, специальность - техник по программному обеспечению и мультимедийным системам.`
@@ -241,10 +241,10 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 			<script>
 			function rePosH() {
 				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "520px");
-					$("#problemsindexblock h1").css("right", "340px");
+					$("#mathindexblock h1").css("right", "460px");
+					$("#problemsindexblock h1").css("right", "290px");
 				} else {
-					$("#mathindexblock h1").css("right", "260px");
+					$("#mathindexblock h1").css("right", "240px");
 					$("#problemsindexblock h1").css("right", "170px");	
 				}
 			}
@@ -481,15 +481,15 @@ func themeHandler1(r *http.Request, theme string) string {
 		log.Println("scientists are not founded", err)
 	}
 	var result string
-	result += `<h2><img src="/static/images/`+theme+`.png">`+header+`</h2>`
+	result += `<h2><img src="/static/images/` + theme + `.png">` + header + `</h2>`
 	result += `<ul class="sectionul">`
 	var name string
 	for rows.Next() {
 		err = rows.Scan(&name)
-		result+=`<li><a href="`+sechref+theme+`/`+name+`">`+name+`</li>`
+		result += `<li><a href="` + sechref + theme + `/` + name + `">` + name + `</li>`
 	}
 	rows.Close()
-	result+=`</ul>`
+	result += `</ul>`
 	return result
 }
 
@@ -570,9 +570,9 @@ func nameHandler1(r *http.Request, theme, name string) string {
 	var article, author, result string
 	if rows.Next() {
 		err = rows.Scan(&article, &author)
-		result+=`<div class="articleinfo"><div class="articlesection"><h3><img src="/static/images/`+theme+`.png">`+header+`</h3></div><div class="articleauthor"><h3>`+author+`</h3></div></div>`
-		result+="<h2>"+name+"</h2>"
-		result+=article
+		result += `<div class="articleinfo"><div class="articlesection"><h3><img src="/static/images/` + theme + `.png">` + header + `</h3></div><div class="articleauthor"><h3>` + author + `</h3></div></div>`
+		result += "<h2>" + name + "</h2>"
+		result += article
 	}
 	rows.Close()
 	return result
@@ -701,15 +701,15 @@ func problemHandler1(r *http.Request, problems string) string {
 		log.Println("scientists are not founded", err)
 	}
 	var result string
-	result+=`<h2><img src="/static/images/`+problems+`.png">`+header+`</h2>`
-	result+=`<ul class="sectionul">`
+	result += `<h2><img src="/static/images/` + problems + `.png">` + header + `</h2>`
+	result += `<ul class="sectionul">`
 	var name string
 	for rows.Next() {
 		err = rows.Scan(&name)
-		result+=`<li><a href="/problems/`+problems+`/`+name+`">`+name+`</li>`
+		result += `<li><a href="/problems/` + problems + `/` + name + `">` + name + `</li>`
 	}
 	rows.Close()
-	result+= `</ul>`
+	result += `</ul>`
 	return result
 }
 
@@ -780,8 +780,8 @@ func problemNameHandler1(r *http.Request, problemname string) string {
 	for rows.Next() {
 		err = rows.Scan(&category, &author, &problem)
 		_, header := DbNameAndHeaderReturn(r, category)
-		result += `<div class="articleinfo"><div class="articlesection"><h3><img src="/static/images/`+ category+`.png">`+header+`</h3></div><div class="articleauthor"><h3>`+author+`</h3></div></div>`
-		result += "<h2>"+problemname+"</h2>"
+		result += `<div class="articleinfo"><div class="articlesection"><h3><img src="/static/images/` + category + `.png">` + header + `</h3></div><div class="articleauthor"><h3>` + author + `</h3></div></div>`
+		result += "<h2>" + problemname + "</h2>"
 		result += problem
 	}
 	rows.Close()
@@ -831,7 +831,7 @@ func MathIndex(w http.ResponseWriter, r *http.Request) {
 			<script>
 			function rePosH() {
 				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "520px");
+					$("#mathindexblock h1").css("right", "360px");
 					$("#problemsindexblock h1").css("right", "340px");
 				} else {
 					$("#mathindexblock h1").css("right", "260px");
@@ -881,7 +881,7 @@ func MathInfo(w http.ResponseWriter, r *http.Request) {
 			<script>
 			function rePosH() {
 				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "520px");
+					$("#mathindexblock h1").css("right", "360px");
 					$("#problemsindexblock h1").css("right", "340px");
 				} else {
 					$("#mathindexblock h1").css("right", "260px");
@@ -995,23 +995,23 @@ func ProblemIndex(w http.ResponseWriter, r *http.Request) {
 
 		Data.Mechanics = "Mechanics"
 		Data.Thermodynamics = "Bases of molecular physics and thermodynamics"
-		Data.Electrodynamics = "Electrodynamics"/*
-		Data.Oscillations = "Oscillations and waves"
-		Data.Atoms = "Physics of atoms and molecules"
-		Data.Optics = "Optics"
-		Data.Hard = "Bases of solids physics"
-		Data.Nucleus = "Atomic nucleus and elementary particles physics"*/
+		Data.Electrodynamics = "Electrodynamics" /*
+			Data.Oscillations = "Oscillations and waves"
+			Data.Atoms = "Physics of atoms and molecules"
+			Data.Optics = "Optics"
+			Data.Hard = "Bases of solids physics"
+			Data.Nucleus = "Atomic nucleus and elementary particles physics"*/
 	} else {
 		Data.Problemsh = "Задачи"
 
 		Data.Mechanics = "Механика"
 		Data.Thermodynamics = "Основы молекулярной физики и термодинамики"
-		Data.Electrodynamics = "Электродинамика"/*
-		Data.Oscillations = "Колебания и волны"
-		Data.Atoms = "Физика атомов и молекул"
-		Data.Optics = "Оптика"
-		Data.Hard = "Основы физики твердого тела"
-		Data.Nucleus = "Физика ядра и элементарных частиц"*/
+		Data.Electrodynamics = "Электродинамика" /*
+			Data.Oscillations = "Колебания и волны"
+			Data.Atoms = "Физика атомов и молекул"
+			Data.Optics = "Оптика"
+			Data.Hard = "Основы физики твердого тела"
+			Data.Nucleus = "Физика ядра и элементарных частиц"*/
 	}
 
 	t, err := template.ParseFiles("templates/problems.tpl")

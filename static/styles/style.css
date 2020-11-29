@@ -33,13 +33,66 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: Oranienbaum;
+	src: url('../fonts/Oranienbaum.ttf');
+}
+
+@font-face {
+	font-family: 'Computer Modern';
+	src: url('../fonts/munrm.eot');
+	src: url('../fonts/munrm.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/munrm.woff') format('woff'),
+		 url('../fonts/munrm.ttf') format('truetype'),
+		 url('../fonts/munrm.svg#cmunrm') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern';
+	src: url('../fonts/munbx.eot');
+	src: url('../fonts/munbx.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/munbx.woff') format('woff'),
+		 url('../fonts/munbx.ttf') format('truetype'),
+		 url('../fonts/munbx.svg#cmunbx') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern';
+	src: url('../fonts/munti.eot');
+	src: url('../fonts/munti.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/munti.woff') format('woff'),
+		 url('../fonts/munti.ttf') format('truetype'),
+		 url('../fonts/munti.svg#cmunti') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern';
+	src: url('../fonts/munbi.eot');
+	src: url('../fonts/munbi.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/munbi.woff') format('woff'),
+		 url('../fonts/munbi.ttf') format('truetype'),
+		 url('../fonts/munbi.svg#cmunbi') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
 body {
 	margin: 0px;
 }
 
 h1 {
 	margin: 0px;
-	font-family: Segoe UI;
+	font-family: Oranienbaum;
 	font-weight: bold;
 }
 
@@ -52,14 +105,6 @@ h2 {
 
 em {
 	font-weight: bold;
-}
-
-.indexblock p {
-	position: relative;
-	width: 400px;
-	margin: 0px;
-	font-family: Segoe UI;
-	color: white;
 }
 
 .mainblock {
@@ -96,21 +141,38 @@ em {
 .button h6 {
 	margin: 0px;
 	position: relative;
-	top: 15px;
-	font-family: Segoe UI;
-	font-weight: 500;
-	font-size: 15px;
+	top: 17px;
+	font-family: Oranienbaum;
+	font-weight: normal;
+	font-size: 17px;
 }
 
 .indexblock {
 	min-height: 450px;
-	display: block;
+	display: flex;
+	align-items: center;
+	padding-right: 70px;
+	padding-left: 70px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.indexblock:after {
-	display: table;
-	content: '';
-	clear: both;
+.indexblock p {
+	width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: Computer Modern;
+	color: white;
+}
+
+.indexblock-info-right {
+	margin-left: auto;
+	text-align: right;
+	justify-content: right
+}
+
+.indexblock-info-right .button {
+	margin-left: auto;
 }
 
 .footer {
@@ -144,20 +206,12 @@ em {
 
 #mathindexblock h1{
 	color: #dfdb70;
-	position: relative;
-	margin-left: 100%;
-	right: 270px;
-	top: 70px;
 	font-size: 75px;
 }
 
 #mathindexblock .button {
 	background: #f15723;
 	color: #dfdb70;
-	position: relative;
-	margin-left: 100%;
-	right: 300px;
-	top: 150px;
 	transition: 0.3s;
 	-ms-transition: 0.3s;
 	-webkit-transition: 0.3s;
@@ -172,17 +226,12 @@ em {
 }
 
 #mathindexblock p {
-	margin-left: 100%;
-	right: 470px;
-	top: 100px;
+	text-align: right;
 	min-height: 70px;
 }
 
 #mathfrontimg {
-	height: 450px;
-	margin-top: -200px;
-	margin-left: 70px;
-	position: relative;
+	height: 385px;
 }
 
 #physindexblock {
@@ -202,18 +251,12 @@ em {
 
 #physindexblock h1{
 	color: #dfdb70;
-	position: relative;
-	margin-left: 70px;
-	top: 70px;
 	font-size: 75px;
 }
 
 #physindexblock .button {
 	background: #7fb369;
 	color: #ffffff;
-	position: relative;
-	top: 150px;
-	left: 70px;
 	transition: 0.3s;
 	-ms-transition: 0.3s;
 	-webkit-transition: 0.3s;
@@ -228,17 +271,12 @@ em {
 }
 
 #physindexblock p {
-	margin-left: 70px;
-	top: 100px;
 	min-height: 70px;
 }
 
 #physfrontimg {
-	height: 450px;
-	margin-top: -200px;
-	float: right;
-	margin-right: 70px;
-	position: relative;
+	height: 385px;
+	margin-left: auto;
 }
 
 #problemsindexblock {
@@ -255,20 +293,12 @@ em {
 
 #problemsindexblock h1{
 	color: #fb5229;
-	position: relative;
-	margin-left: 100%;
-	right: 410px;
-	top: 70px;
 	font-size: 75px;
 }
 
 #problemsindexblock .button {
 	background: #bf2f60;
 	color: #ffffff;
-	position: relative;
-	margin-left: 100%;
-	right: 300px;
-	top: 150px;
 	transition: 0.3s;
 	-ms-transition: 0.3s;
 	-webkit-transition: 0.3s;
@@ -284,17 +314,12 @@ em {
 
 #problemsindexblock p {
 	color: black;
-	margin-left: 100%;
-	right: 470px;
-	top: 100px;
+	text-align: right;
 	min-height: 70px;
 }
 
 #problemsfrontimg {
 	height: 450px;
-	margin-top: -200px;
-	margin-left: 70px;
-	position: relative;
 }
 
 #scientistindexblock {
@@ -311,18 +336,12 @@ em {
 
 #scientistindexblock h1{
 	color: #C5EEF7;
-	position: relative;
-	margin-left: 70px;
-	top: 70px;
 	font-size: 75px;
 }
 
 #scientistindexblock .button {
 	background: #336E7B;
 	color: #C5EEF7;
-	position: relative;
-	top: 150px;
-	left: 70px;
 	transition: 0.3s;
 	-ms-transition: 0.3s;
 	-webkit-transition: 0.3s;
@@ -337,30 +356,24 @@ em {
 }
 
 #scientistindexblock p {
-	margin-left: 70px;
-	top: 100px;
 	min-height: 70px;
 }
 
 #scientistfrontimg {
+	margin-left: auto;
 	height: 350px;
-	margin-top: -175px;
-	float: right;
 	border-radius: 15px;
-	margin-right: 70px;
-	position: relative;
 }
 
 #indexpage {
 	background: #4183D7;
+	justify-content: center;
 }
 
 #indexpage h1 {
 	text-align: center;
 	color: #C5EFF7;
 	font-size: 75px;
-	position: relative;
-	top: 50px;
 }
 
 #indexpage h2 {
@@ -369,18 +382,13 @@ em {
 	font-size: 50px;
 	font-family: Segoe UI;
 	font-weight: bold;
-	position: relative;
-	top: 50px;
 }
 
 #indexpage p {
-	width: 90%;
-	top: 65px;
+	width: auto;
 	text-indent: 50px;
-	text-align: center;
-	margin: 0 auto;
-	font-family: Segoe UI;
-	margin-top: 30px;
+	text-align: justify;
+	font-family: Computer Modern;
 }
 
 #mrpark {
@@ -389,38 +397,28 @@ em {
 
 #mrpark h1 {
 	color: #ECECEC;
-	text-align: center;
 	font-size: 75px;
-	position: relative;
-	top: 50px;
 }
 
 #mrpark p {
-	width: 90%;
-	top: 65px;
-	text-align: center;
-	margin: 0 auto;
-	font-family: Segoe UI;
-	margin-top: 30px;
+	font-family: Computer Modern;
+	width: auto;
 }
 
 #langs {
 	background: #BF55EC;
+	justify-content: center;
 }
 
 #langs h1 {
 	color: #DCC6E0;
 	text-align: center;
 	font-size: 75px;
-	position: relative;
-	top: 50px;
+	margin-bottom: 15px;
 }
 
 #langs #lang {
-	margin: 0 auto;
 	text-align: center;
-	position: relative;
-	top: 75px;
 }
 
 #langs .lang {
@@ -445,7 +443,7 @@ em {
 }
 
 #langs .lang h4 {
-	font-family: Segoe UI;
+	font-family: Oranienbaum;
 	font-weight: bold;
 	font-size: 50px;
 }
