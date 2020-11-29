@@ -12,8 +12,8 @@
 <body>
 </div>
 <div class="indexblock" id="problemsindexblock">
-			<h1>{{.Problemsh}}</h1>
 			<img src="/static/images/problems.png" id="problemsfrontimg">
+			<h1>{{.Problemsh}}</h1>
 		</div>
 		<div class="mainblock" id="problemsmainblock">
 		{{if gt (len .Article) 2 }}

@@ -11,8 +11,8 @@
 	</head>
 <body onresize="rePosH();">
 <div class="indexblock" id="mathindexblock">
-<h1>{{.Mathh}}</h1>
 <img src="/static/images/math.svg" id="mathfrontimg">
+<h1>{{.Mathh}}</h1>
 </div>
 <div class="mainblock" id="mathmainblock">
 		{{if gt (len .Article) 2 }}
@@ -40,7 +40,6 @@
 		{{end}}
 </div>
 <div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>
-{{.Addscript}}
 <script id="MathJax" defer type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>

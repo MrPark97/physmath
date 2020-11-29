@@ -162,18 +162,16 @@ func footerOut(w http.ResponseWriter, r *http.Request) {
 
 func IndexPrint(w http.ResponseWriter, r *http.Request) {
 	type data struct {
-		Mathh, Addscript, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
+		Mathh, Mathp, Readmore, Physh, Physp, Problemsh, Problemsp, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors, Mechanics, Thermodynamics, Electrodynamics, Oscillations, Atoms, Optics, Hard, Nucleus string
 	}
 
 	var (
 		Data      data
-		Addscript string
 	)
 
 	lang, err := r.Cookie("lang")
 	if lang != nil && lang.Value == `en` {
 		Data.Mathh = "Math"
-		Addscript = ""
 		Data.Mathp = "Mathematics lessons by M. Vygodsky. General basics and concepts of mathematics. Arithmetics, algebra, geometry and basics of calculus."
 		Data.Readmore = "READ MORE"
 		Data.Physh = "Physics"
@@ -236,21 +234,6 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 		Data.Optics = "Оптика"
 		Data.Hard = "Основы физики твердого тела"
 		Data.Nucleus = "Физика ядра и элементарных частиц"
-
-		Addscript = `
-			<script>
-			function rePosH() {
-				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "460px");
-					$("#problemsindexblock h1").css("right", "290px");
-				} else {
-					$("#mathindexblock h1").css("right", "240px");
-					$("#problemsindexblock h1").css("right", "170px");	
-				}
-			}
-			rePosH();
-			</script>
-		`
 	}
 
 	t, err := template.ParseFiles("templates/index.tpl")
@@ -261,7 +244,6 @@ func IndexPrint(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println("template print error", err)
 	}
-	fmt.Fprint(w, Addscript)
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {
@@ -791,7 +773,7 @@ func problemNameHandler1(r *http.Request, problemname string) string {
 func MathIndex(w http.ResponseWriter, r *http.Request) {
 	lang, err := r.Cookie("lang")
 	type data struct {
-		Addscript, Article, Mathh, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors string
+		Article, Mathh, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors string
 	}
 
 	var Data data
@@ -827,20 +809,6 @@ func MathIndex(w http.ResponseWriter, r *http.Request) {
 		Data.Coordinates = "Декартовы координаты"
 		Data.Transformations = "Преобразования фигур"
 		Data.Vectors = "Векторы"
-		Data.Addscript = `
-			<script>
-			function rePosH() {
-				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "360px");
-					$("#problemsindexblock h1").css("right", "340px");
-				} else {
-					$("#mathindexblock h1").css("right", "260px");
-					$("#problemsindexblock h1").css("right", "170px");	
-				}
-			}
-			rePosH();
-			</script>
-		`
 		Data.Mathh = "Математика"
 	}
 
@@ -869,7 +837,7 @@ func MathInfo(w http.ResponseWriter, r *http.Request) {
 
 	lang, err := r.Cookie("lang")
 	type data struct {
-		Addscript, Article, Mathh, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors string
+		Article, Mathh, Geometry, Numbers, Algebraic, Algebra, Functions, Transcendental, Equations, Inequalities, Calculus, Plane, Solid, Coordinates, Transformations, Vectors string
 	}
 
 	var Data data
@@ -877,20 +845,6 @@ func MathInfo(w http.ResponseWriter, r *http.Request) {
 		Data.Mathh = "Math"
 		Data.Article = Article
 	} else {
-		Data.Addscript = `
-			<script>
-			function rePosH() {
-				if(window.innerWidth > 769) {
-					$("#mathindexblock h1").css("right", "360px");
-					$("#problemsindexblock h1").css("right", "340px");
-				} else {
-					$("#mathindexblock h1").css("right", "260px");
-					$("#problemsindexblock h1").css("right", "170px");	
-				}
-			}
-			rePosH();
-			</script>
-		`
 		Data.Mathh = "Математика"
 		Data.Article = Article
 	}

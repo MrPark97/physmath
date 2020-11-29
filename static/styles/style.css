@@ -719,42 +719,28 @@ em {
 @-moz-keyframes imgResize{
 	from {
 		height: 450px;
-		margin-top: -200px;
 	}
 	to {
 		height: 150px;
-		margin-top: -68px;
 	}
 }
 
 @-moz-keyframes hResize{
 	from {
 		font-size: 75px;
-		top: 70px;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
 	}
 }
 
 @-moz-keyframes hResize1{
 	from {
 		font-size: 75px;
-		top: 70px;
-		margin-left: 70px;
-		text-align: left;
-		left: 0px;
-		width: 0px;
 		opacity: 1;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 0;
 	}
 }
@@ -771,20 +757,10 @@ em {
 @-moz-keyframes fadeIn1{
 	from {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 0;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 1;
 	}
 }
@@ -832,42 +808,28 @@ em {
 @-webkit-keyframes imgResize{
 	from {
 		height: 450px;
-		margin-top: -200px;
 	}
 	to {
 		height: 150px;
-		margin-top: -68px;
 	}
 }
 
 @-webkit-keyframes hResize{
 	from {
 		font-size: 75px;
-		top: 70px;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
 	}
 }
 
 @-webkit-keyframes hResize1{
 	from {
 		font-size: 75px;
-		top: 70px;
-		margin-left: 70px;
-		text-align: left;
-		left: 0px;
-		width: 0px;
 		opacity: 1;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 0;
 	}
 }
@@ -884,20 +846,10 @@ em {
 @-webkit-keyframes fadeIn1{
 	from {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 0;
 	}
 	to {
 		font-size: 55px;
-		top: 40px;
-		margin-left: 50%;
-		left: -100px;
-		text-align: center;
-		width: 200px;
 		opacity: 1;
 	}
 }
