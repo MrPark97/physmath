@@ -133,15 +133,15 @@ em {
 
 .button {
 	width: 220px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 	height: 50px;
 	border-radius: 5px;
 	text-align: center;
 }
 
 .button h6 {
-	margin: 0px;
-	position: relative;
-	top: 17px;
 	font-family: Oranienbaum;
 	font-weight: normal;
 	font-size: 17px;
