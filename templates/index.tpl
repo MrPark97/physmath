@@ -21,7 +21,7 @@
 		</div>
 		<div class="footer" id="physfooter"><a href="#">&copy; MrPark 2015</a></div>
 		<div class="indexblock" id="problemsindexblock">
-			<img src="/static/images/problems.png" id="problemsfrontimg">
+			<img src="/static/images/problems.svg" id="problemsfrontimg">
 			<div class="indexblock-info-right">
 				<h1>{{.Problemsh}}</h1>
 				<p>{{.Problemsp}}</p>
