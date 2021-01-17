@@ -299,7 +299,6 @@ em {
 #scientistindexblock h1{
 	color: #C5EEF7;
 	font-size: 55px;
-	top: 40px;
 	text-align: center;
 }
 
@@ -445,7 +444,6 @@ em {
 }
 
 #mathmainblock ul {
-	//color: #dfdb70;
 	list-style: none;
 }
 
@@ -469,7 +467,6 @@ em {
 }
 
 #physmainblock ul {
-	//color: #674172;
 	list-style: none;
 }
 
@@ -520,7 +517,6 @@ em {
 }
 
 #problemsmainblock ul {
-	//color: #D35400;
 	list-style: none;
 }
 

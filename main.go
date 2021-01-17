@@ -25,11 +25,11 @@ func main() {
 	}
 
 	if physdb == "" {
-		physdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
+		physdb = "postgres://evgeniypak:@localhost:5432/physmath?sslmode=disable"
 	}
 
 	if mathdb == "" {
-		mathdb = "postgres://postgres:abracadabra_2016!@localhost:5432/physmath?sslmode=disable"
+		mathdb = "postgres://evgeniypak:@localhost:5432/physmath?sslmode=disable"
 	}
 
 	http.HandleFunc("/", homePage)
