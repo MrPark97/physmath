@@ -418,11 +418,14 @@ em {
 }
 
 #langs #lang {
+	display: flex;
 	text-align: center;
 }
 
 #langs .lang {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 15px;
 	width: 200px;
 	height: 200px;
@@ -448,6 +451,10 @@ em {
 	font-size: 50px;
 }
 
+.lang-img {
+	height: 150px;
+}
+
 #mathmainblock {
 	color: #019875;
 }
@@ -457,7 +464,6 @@ em {
 }
 
 #mathmainblock ul {
-	//color: #dfdb70;
 	color: #019875;
 	list-style: none;
 }

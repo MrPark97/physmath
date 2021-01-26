@@ -446,8 +446,8 @@ em {
 	justify-content: center;
 	align-items: center;
 	margin: 10px;
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	background: #663399;
 	color: #DCC6E0;
 	border-radius: 15px;
@@ -468,6 +468,10 @@ em {
 	font-family: Oranienbaum;
 	font-weight: bold;
 	font-size: 30px;
+}
+
+.lang-img {
+	height: 90px;
 }
 
 #mathmainblock {

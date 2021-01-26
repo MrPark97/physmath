@@ -16,8 +16,8 @@
 	<div class="indexblock-info">
 		<h1>{{.Langh}}</h1>
 		<div id="lang">
-		<div id="RU" class="lang" onclick="document.cookie = 'lang=ru'; window.open(document.URL, '_self');"><h4>RU</h4></div>
-		<div id="EN" class="lang" onclick="document.cookie = 'lang=en'; window.open(document.URL, '_self');"><h4>EN</h4></div>
+		<div id="RU" class="lang" onclick="document.cookie = 'lang=ru'; window.open(document.URL, '_self');"><img class="lang-img" src="/static/images/ru.svg"></div>
+		<div id="EN" class="lang" onclick="document.cookie = 'lang=en'; window.open(document.URL, '_self');"><img class="lang-img" src="/static/images/uk.svg"></div>
 		</div>
 	</div>
 </div>
