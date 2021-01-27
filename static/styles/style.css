@@ -366,13 +366,13 @@ em {
 }
 
 #indexpage {
-	background: #4183D7;
+	background: #37bd80;
 	justify-content: center;
 }
 
 #indexpage h1 {
 	text-align: center;
-	color: #C5EFF7;
+	color: #dfdb70;
 	font-size: 75px;
 }
 
@@ -392,11 +392,11 @@ em {
 }
 
 #mrpark {
-	background: #6C7A89;
+	background: #bf2f60;
 }
 
 #mrpark h1 {
-	color: #ECECEC;
+	color: #dfdb70;
 	font-size: 75px;
 }
 
@@ -406,12 +406,12 @@ em {
 }
 
 #langs {
-	background: #BF55EC;
+	background: #000;
 	justify-content: center;
 }
 
 #langs h1 {
-	color: #DCC6E0;
+	color: #fff;
 	text-align: center;
 	font-size: 75px;
 	margin-bottom: 15px;
@@ -429,10 +429,10 @@ em {
 	margin: 15px;
 	width: 200px;
 	height: 200px;
-	background: #663399;
+	background: #fff;
 	color: #DCC6E0;
 	border-radius: 15px;
-	opacity: 0.7;
+	opacity: 0.9;
 	cursor: pointer;
 	transition: 0.3s;
 	-ms-transition: 0.3s;
@@ -453,6 +453,10 @@ em {
 
 .lang-img {
 	height: 150px;
+}
+
+#langs #RU {
+	background: #FACC33;
 }
 
 #mathmainblock {
