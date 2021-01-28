@@ -727,9 +727,18 @@ em {
 @-moz-keyframes openSection{
 	from {
 		min-height: 220px;
+		padding-right: 35px;
+		padding-left: 35px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
 	}
 	to {
 		min-height: 75px;
+		padding-right: 30px;
+		padding-left: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
 
@@ -748,6 +757,7 @@ em {
 	}
 	to {
 		height: 75px;
+		margin-top: 0px;
 	}
 }
 
@@ -757,6 +767,7 @@ em {
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 	}
 }
 
@@ -767,6 +778,7 @@ em {
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 0;
 	}
 }
@@ -783,10 +795,12 @@ em {
 @-moz-keyframes fadeIn1{
 	from {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 0;
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 1;
 	}
 }
@@ -815,10 +829,19 @@ em {
 
 @-webkit-keyframes openSection{
 	from {
-		min-height: 225px;
+		min-height: 220px;
+		padding-right: 35px;
+		padding-left: 35px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
 	}
 	to {
 		min-height: 75px;
+		padding-right: 30px;
+		padding-left: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
 
@@ -837,6 +860,7 @@ em {
 	}
 	to {
 		height: 75px;
+		margin-top: 0px;
 	}
 }
 
@@ -846,6 +870,7 @@ em {
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 	}
 }
 
@@ -856,6 +881,7 @@ em {
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 0;
 	}
 }
@@ -872,10 +898,12 @@ em {
 @-webkit-keyframes fadeIn1{
 	from {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 0;
 	}
 	to {
 		font-size: 28px;
+		margin-bottom: 0px;
 		opacity: 1;
 	}
 }
