@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="/static/styles/small1.css" media="(min-width:320px) and (max-width:769px)">
 		<script src="/static/classes.js"></script>
 		<script src="/static/jquery.js"></script>
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
 	</head>
 <body onresize="rePosH();">
 <div class="indexblock" id="mathindexblock">
@@ -39,15 +41,12 @@
 			</ul>
 		{{end}}
 </div>
-<div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>
-<script id="MathJax" defer type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 <script>
-	if(navigator["mozGetUserMedia"]) {
-		var mj = document.getElementById('MathJax');
-		document.body.removeChild(mj);
-	}
+	window.MathJax = {
+		loader: {load: ["input/tex", "output/chtml"]}
+	};
 </script>
+<div class="footer" id="mathfooter"><a href="#">&copy; MrPark 2015</a></div>
 <!-- START WWW.UZ TOP-RATING --><SCRIPT language="javascript" type="text/javascript">
 <!--
 top_js="1.0";top_r="id=35268&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="smart_top=1; path=/"; top_r+="&c="+(document.cookie?"Y":"N")

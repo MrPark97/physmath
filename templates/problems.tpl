@@ -29,12 +29,6 @@
 			{{end}}
 		</div>
 		<div class="footer" id="problemsfooter"><a href="#">&copy; MrPark 2015</a></div>
-<script>
-	if(navigator["mozGetUserMedia"]) {
-		var mj = document.getElementById('MathJax');
-		document.body.removeChild(mj);
-	}
-</script>
 <!-- START WWW.UZ TOP-RATING --><SCRIPT language="javascript" type="text/javascript">
 <!--
 top_js="1.0";top_r="id=35268&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="smart_top=1; path=/"; top_r+="&c="+(document.cookie?"Y":"N")

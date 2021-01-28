@@ -608,6 +608,7 @@ em {
 }
 
 .mainblock h6 {
+	font-size: 12px;
 	text-align: center;
 }
 
@@ -654,12 +655,12 @@ em {
 
 .mainblock table tr td {
 	margin: 2px;
-	font-family: Calibri;
+	font-family: Computer Modern;
 }
 
 .mainblock span {
 	margin: 13px;
-	font-family: Calibri;
+	font-family: Computer Modern;
 	font-size: 10px;
 	text-align: center;
 	display: block;
